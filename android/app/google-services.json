@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "413765437358",
+    "project_id": "neostore-603e6",
+    "storage_bucket": "neostore-603e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413765437358:android:f82debc6357adc02e92a3f",
+        "android_client_info": {
+          "package_name": "com.neostorereplica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413765437358-eo1cseps0ucmh7iqidl1g45n6np4pi2g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.neostorereplica",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "413765437358-ghajlhaf1i0oja2h0ee45cacrofuo8po.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQZ3pIhs0xPRIrAkYgSIylKTbc1SwYn0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413765437358-ghajlhaf1i0oja2h0ee45cacrofuo8po.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
