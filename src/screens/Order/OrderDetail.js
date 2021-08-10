@@ -111,11 +111,11 @@ const OrderDetail = ({ route }) => {
     }
     return (
         <View style={styles.main}>
-            <ScrollView>
+            <View style={styles.main}>
                 <Text style={styles.title}>Order ID: {item._id}</Text>
                 <Text style={styles.subtitle}>Product Details</Text>
                 <PlaceOrderList data={item.items} />
-            </ScrollView>
+                </View>
             <View style={styles.invoice}>
                 <Icon
                     name='receipt'

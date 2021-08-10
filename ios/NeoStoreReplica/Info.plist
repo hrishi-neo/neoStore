@@ -12,24 +12,6 @@
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleGetInfoString</key>
 	<string></string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLName</key>
-			<string>facebook</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb360002502379847</string>
-				<string>com.googleusercontent.apps.413765437358-ddpssr4mi7hasbtvob6il5g46mjhmfm4</string>
-			</array>
-		</dict>
-	</array>
-	<key>FacebookAppID</key>
-	<string>360002502379847</string>
-	<key>FacebookClientToken</key>
-	<string>d11ce9d0ca6c6709a5629ff0d6ea7172</string>
-	<key>FacebookDisplayName</key>
-	<string>NeoStoreReplica</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -42,6 +24,28 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>facebook</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb360002502379847</string>
+				<string>com.googleusercontent.apps.413765437358-ddpssr4mi7hasbtvob6il5g46mjhmfm4</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>360002502379847</string>
+	<key>FacebookClientToken</key>
+	<string>d11ce9d0ca6c6709a5629ff0d6ea7172</string>
+	<key>FacebookDisplayName</key>
+	<string>NeoStoreReplica</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -60,10 +64,6 @@
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>1</string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -104,7 +104,7 @@
 		<string>Zocial.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>Launch Screen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

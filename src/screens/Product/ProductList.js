@@ -79,12 +79,12 @@ const ProductList = () => {
 
     return (
         <View style={{ flex: 1, }}>
-            {data.length > 1 ? <ScrollView >
+            {data.length > 1 ? 
                 <View style={styles.main}>
                     <ProductsList data={data} numofColumn={1} />
                 </View>
 
-            </ScrollView> : null}
+            : null}
             <ActivityIndicator style={styles.loading} animating={loading} size="large" color="#1E90FF" />
             {data.length > 1 ? null : <View style={{ flex: 1, justifyContent: 'center' }}><Text style={styles.title}>NO PRODUCTS AVAILABLE</Text></View>}
             <Modal
@@ -163,7 +163,7 @@ const ProductList = () => {
 const styles = StyleSheet.create({
 
     main: {
-
+        flex:1,
         backgroundColor: '#F5F5F5'
     },
     selectStyle:{
