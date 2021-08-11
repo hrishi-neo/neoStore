@@ -58,7 +58,7 @@ const OrderDetail = ({ route }) => {
         ' <table>' +
         ' <tr><td class="title"><h1>NeoSTORE</h1></td>' +
         `<td>Invoice #: 123<br />Created at ${new Date()}</td></tr></table></td></tr>` +
-        ` <tr class="information"><td colspan="2"><table><tr><td>${user.firstName} ${user.lastName}<br />${user.address[0].addressLine}<br />${user.address[0].city}, ${user.address[0].state} </td></tr>` +
+        ` <tr class="information"><td colspan="2"><table><tr><td>${user.firstName} ${user.lastName}<br />273, 'Prashant' Dharampeth<br />Nagpur, Maharashtra </td></tr>` +
         ' <tr class="heading"><td>Item</td><td>Price</td></tr>'
 
     for (var i = 0; i < item.items.length; i++) {

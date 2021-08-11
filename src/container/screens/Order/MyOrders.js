@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {  View } from 'react-native'
+import {  View ,ActivityIndicator} from 'react-native'
 import { useDispatch } from 'react-redux'
 import { getOrder } from '../../../redux/action'
 import { useSelector } from 'react-redux'
@@ -27,8 +27,14 @@ const MyOrders = () => {
     
     return (
         <View style={styles.main}>
+           
             <MyOrderList data={order} />
-            
+            <ActivityIndicator
+        style={styles.loading}
+        animating={loading}
+        size="large"
+        color="#1E90FF"
+      />
         </View>
     )
 }
@@ -37,6 +43,9 @@ const styles = create({
     main: {
         flex: 1,
 
-    },
+    }, loading: {
+        position: 'absolute',
+        alignSelf: 'center',
+      },
 })
 export default MyOrders

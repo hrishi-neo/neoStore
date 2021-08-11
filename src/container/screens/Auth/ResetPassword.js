@@ -31,7 +31,8 @@ const ResetPassword = ({navigation}) => {
     } else if (confirm != newP) {
       alert('Password must match');
     } else {
-      await dispatch(resetPassword({token: token, password: password, newPassword: newP}),
+      await dispatch(
+        resetPassword({token: token, password: password, newPassword: newP}),
       );
       navigation.navigate('Home');
     }
