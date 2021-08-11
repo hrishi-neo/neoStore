@@ -1,5 +1,5 @@
 import React from 'react';
-import StackNavigation from './src/navigation/StackNavigation';
+import StackNavigation from './src/container/navigation/StackNavigator/StackNavigation';
 import { Provider } from 'react-redux'
 import { persistStore, persistReducer } from 'redux-persist'
 import AsyncStorage from '@react-native-async-storage/async-storage'

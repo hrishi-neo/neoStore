@@ -452,14 +452,14 @@ function* resetPass(tok) {
         console.log(response.data)
         const success = response.data.success
         if (success === true) {
-
+            alert(' Password changed successfully!')
             
         } else {
             alert(response.data.message)
         }
 
     } catch (error) {
-        console.log(error)
+       alert('Current Password doesnt exist!')
 
     }
 }
