@@ -194,6 +194,9 @@ compile project(':react-native-html-to-pdf')
        exclude group: 'com.google.android.gms', module: 'play-services-base'
        exclude group: 'com.google.android.gms', module: 'play-services-maps'
    }
+   implementation "com.squareup.okhttp3:okhttp:4.2.1"
+implementation "com.squareup.okhttp3:logging-interceptor:4.2.1"
+implementation "com.squareup.okhttp3:okhttp-urlconnection:4.2.1"
    implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
    implementation 'com.google.android.gms:play-services-base:17.2.1'
    implementation 'com.google.android.gms:play-services-maps:17.0.0'

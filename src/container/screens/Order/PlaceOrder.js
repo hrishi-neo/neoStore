@@ -15,6 +15,7 @@ import CardView from 'react-native-cardview';
 import PlaceOrderList from './PlaceOrderList';
 import ProdNameList from './ProdNameList';
 import {create} from '../../../utilities/normalize';
+import AllInOneSDKManager from 'paytm_allinone_react-native';
 
 /**
  *
@@ -48,13 +49,13 @@ const PlaceOrder = ({navigation}) => {
   };
   const confirmOrd = async () => {
     if (shipAddress == undefined) {
-      alert("Please add shipping address")
+      alert('Please add shipping address');
     } else {
       await dispatch(placeOrder({token: token, addressId: shipAddress._id}));
       setShowmodal(true);
+      
     }
-   
-  };
+  }
   return (
     <View style={styles.main}>
       <ScrollView>
