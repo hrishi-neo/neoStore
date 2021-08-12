@@ -14,23 +14,26 @@ import { create } from '../utilities/normalize';
  */
 
 const Sliderbox = ({ data }) => {
-
+    var imgData = [];
+    for (var i=0;i<data.length;i++){
+        imgData.push(data[i].url)
+    }
     const navigation = useNavigation();
 
-    const onSubmit = () => {
+    const onSubmit = (cat) => {
         
-         navigation.navigate('Product List')
+         navigation.navigate('Product List',{cat})
     }
     return (
 
         <View style={styles.container}>
             
-                <SliderBox images={data} autoplay
+                <SliderBox images={imgData} autoplay
                     circleLoop
                     resizeMode='contain'
                     activeOpacity={0.8}
                     onCurrentImagePressed={index =>
-                        onSubmit()
+                        onSubmit(data[index].cat)
                       }
                     dotStyle={{
                         width: 0, height: 0

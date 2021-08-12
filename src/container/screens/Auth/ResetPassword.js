@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import CustomTextInput from '../../../components/CustomTextInput';
 import {useDispatch} from 'react-redux';
@@ -22,6 +22,10 @@ const ResetPassword = ({navigation}) => {
   const [newerr, setNewErr] = useState();
   const [confirm, setConfirm] = useState('');
   const token = useSelector((state) => state.user.token);
+  const resetPass = useSelector((state) => state.resetPass);
+  console.log(resetPass);
+  const [check, setCheck] = useState(resetPass);
+  console.log('cj' + check);
   const [Cerr, setCErr] = useState();
   const onSubmit = async () => {
     if (password.length < 8) {
@@ -34,9 +38,17 @@ const ResetPassword = ({navigation}) => {
       await dispatch(
         resetPassword({token: token, password: password, newPassword: newP}),
       );
-      navigation.navigate('Home');
+      if (resetPass != check) {
+        navigation.goBack();
+      }
     }
   };
+  useEffect(() => {
+    
+    if (resetPass != check) {
+      navigation.goBack();
+    }
+  }, [resetPass])
   return (
     <View style={styles.main}>
       <CustomTextInput

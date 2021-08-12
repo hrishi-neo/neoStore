@@ -22,7 +22,9 @@ import {useSelector} from 'react-redux';
  *
  */
 
-const ProductList = () => {
+const ProductList = ({route}) => {
+  const cat =route.params
+  console.log(cat)
   const dispatch = useDispatch();
   const prod = useSelector((state) => state.prod);
   const [data, setData] = useState(prod);
@@ -33,6 +35,7 @@ const ProductList = () => {
 
   useEffect(() => {
     dispatch(getProd());
+    updateProds(cat.cat)
   }, []);
 
   const showModal = (cat) => {
@@ -78,7 +81,6 @@ const ProductList = () => {
   const updateProdsbyCat = async (cat) => {
     try {
       const filtered = data.filter(function (entry) {
-        console.log(entry.category.name);
         return entry.category.name == cat;
       });
       setData(filtered);
@@ -93,6 +95,19 @@ const ProductList = () => {
     setData(prod)
     setReset(false);
   };
+  const updateProds = async (cat) => {
+    try {
+      const filtered = data.filter(function (entry) {
+        return entry.category.name == cat;
+      });
+      setData(filtered);
+     
+      setShowmodal(false);
+    } catch (error) {
+      setShowmodal(false);
+    }
+  };
+  
   return (
     <View style={{flex: 1}}>
       {reset == true ? (

@@ -47,26 +47,29 @@ const PlaceOrder = ({navigation}) => {
     navigation.navigate('Home');
   };
   const confirmOrd = async () => {
-    await dispatch(placeOrder({token: token, addressId: shipAddress._id}));
-    setShowmodal(true);
+    if (shipAddress == undefined) {
+      alert("Please add shipping address")
+    } else {
+      await dispatch(placeOrder({token: token, addressId: shipAddress._id}));
+      setShowmodal(true);
+    }
+   
   };
   return (
     <View style={styles.main}>
       <ScrollView>
-        {shipAddress == undefined   ?
-        (
-            <TouchableOpacity
-              activeOpacity={0.5}
-              onPress={() => {
-                onSubmit();
-              }}
-              style={styles.btn}>
-              <Text style={{color: '#fff', fontSize: 16}}>
-                Add Shipping Address
-              </Text>
-            </TouchableOpacity>
-          ):
-        (
+        {shipAddress == undefined ? (
+          <TouchableOpacity
+            activeOpacity={0.5}
+            onPress={() => {
+              onSubmit();
+            }}
+            style={styles.btn}>
+            <Text style={{color: '#fff', fontSize: 16}}>
+              Add Shipping Address
+            </Text>
+          </TouchableOpacity>
+        ) : (
           <View style={styles.container}>
             <CardView cardElevation={5} cardMaxElevation={2}>
               <View style={styles.cardView}>
@@ -92,7 +95,7 @@ const PlaceOrder = ({navigation}) => {
               </View>
             </CardView>
           </View>
-        ) }
+        )}
 
         <PlaceOrderList data={cart} />
         <Text style={styles.price}>Price Details</Text>

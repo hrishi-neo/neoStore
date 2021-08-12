@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
+import {Alert, View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
 import CardView from 'react-native-cardview'
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import { useDispatch } from 'react-redux'
@@ -20,7 +20,19 @@ const CartList = ({ data }) => {
     const token = useSelector((state) => state.user.token)
 
     const removeIt = (id) => {
-        dispatch(removeFromCart({ token: token, productId: id }))
+        Alert.alert(
+            "NeoStore",
+            "Do you want to remove this product from cart",
+            [
+              {
+                text: "Cancel",
+                onPress: () => console.log("Cancel Pressed"),
+                style: "cancel"
+              },
+              { text: "Yes", onPress: () =>  dispatch(removeFromCart({ token: token, productId: id })) }
+            ]
+          );
+       
     }
     const updateIt = (id, quantity) => {
         dispatch(updateCart({ token: token, productId: id, quantity: quantity }))

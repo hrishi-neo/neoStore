@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Image, Text, TouchableOpacity } from 'react-native'
+import {Alert, View, Image, Text, TouchableOpacity } from 'react-native'
 import { DrawerItem, DrawerContentScrollView } from '@react-navigation/drawer'
 import {
     Title,
@@ -86,7 +86,7 @@ const DrawerContent = (props) => {
                             icon={({ size }) => (
                                 <MaterialIcons color='#1E90FF' name="sofa" size={size} />)}
                             label="All Products"
-                            onPress={() => { props.navigation.navigate('Product List') }} />
+                            onPress={() => { props.navigation.navigate('Product List',{cat:'Table'}) }} />
                         {loggedIn ? <DrawerItem
                             icon={({ size }) => (
                                 <IconBadge
@@ -131,7 +131,19 @@ const DrawerContent = (props) => {
 
             {loggedIn ? <Drawer.Section style={styles.bottomDrawerSection}>
                 <DrawerItem onPress={() => {
-                    dispatch(logout())
+                    Alert.alert(
+                        "NeoStore",
+                        "Do you want to logout",
+                        [
+                          {
+                            text: "Cancel",
+                            onPress: () => console.log("Cancel Pressed"),
+                            style: "cancel"
+                          },
+                          { text: "Yes", onPress: () =>   dispatch(logout())}
+                        ]
+                      );
+                    
 
                 }
                 } icon={({ size }) => (<Icons color='#1E90FF'

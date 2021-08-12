@@ -1,7 +1,8 @@
 import { call, put, takeLatest } from "@redux-saga/core/effects";
 import axios from "axios";
+import Toast from 'react-native-simple-toast';
 import {GET_PRODUCT, RESET_PASSWORD, UPDATE_ADDRESS, GET_ORDER, GET_DATA, GET_ADDRESS, ADD_ADDRESS, LOGIN, REGISTER, FORGOT_PASSWORD, DEL_ADDRESS, ADD_TO_CART, GET_CART, REMOVE_FROM_CART, UPDATE_CART, PLACE_ORDER } from "./actionTypes";
-import { saveData,saveProd, registerStatus, saveOrder, getUser, getAddress, saveCart, getCart, saveAddress } from './action';
+import { saveData,saveProd,resetIt, registerStatus, saveOrder, getUser, getAddress, saveCart, getCart, saveAddress } from './action';
 
 
 function* fetchData() {
@@ -449,18 +450,19 @@ function* resetPass(tok) {
                 }
             })
         })
-        console.log(response.data)
+       
         const success = response.data.success
         if (success === true) {
-            alert(' Password changed successfully!')
-            
+            Toast.show('Password changed successfully', Toast.LONG);
+            yield put(resetIt())
+        
         } else {
             alert(response.data.message)
         }
 
     } catch (error) {
-       alert('Current Password doesnt exist!')
-
+      alert('current password doesnt exist!')
+      
     }
 }
 

@@ -7,6 +7,7 @@ export const FORGOT_PASSWORD = 'FORGOT_PASSWORD';
 export const SETNEW_PASSWORD = 'SETNEW_PASSWORD';
 export const SETIMG = 'SETIMG'
 export const RESET_PASSWORD = 'RESET_PASSWORD';
+export const RESET_PASS = 'RESET_PASS';
 
 export const GET_DATA = 'GET_DATA';
 export const SAVE_DATA = 'SAVE_DATA';

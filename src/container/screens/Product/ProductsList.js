@@ -23,7 +23,8 @@ const ProductsList = ({ data, numofColumn }) => {
 
     return (
         <View>
-            <FlatList data={data} numColumns={numofColumn}
+            <FlatList
+            data={data} numColumns={numofColumn}
                 showsVerticalScrollIndicator={false}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => {

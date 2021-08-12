@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, FlatList, TouchableOpacity } from 'react-native'
+import { View,Alert, Text, FlatList, TouchableOpacity } from 'react-native'
 import CardView from 'react-native-cardview'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import { useDispatch } from 'react-redux'
@@ -25,14 +25,31 @@ const ShipAddressList = ({ data }) => {
     const token = useSelector((state) => state.user.token)
     const shipAddress = useSelector((state) => state.shipAddress)
     console.log(shipAddress)
+   
     const dispatch = useDispatch()
     const removeAdd = (id) => {
+        Alert.alert(
+            "NeoStore",
+            "Do you want to remove this address",
+            [
+              {
+                text: "Cancel",
+                onPress: () => console.log("Cancel Pressed"),
+                style: "cancel"
+              },
+              { text: "Yes", onPress: () => {
+                try{
+                    if(shipAddress._id==id){
+                        dispatch(delShipAddress())
+             
+                     }
+                }catch(e){}
+                
+                 dispatch(delAddress({ token: token, productId: id }))
+              } }
+            ]
+          );
         
-        if(shipAddress._id==id){
-           dispatch(delShipAddress())
-
-        }
-        dispatch(delAddress({ token: token, productId: id }))
     }
     const onSubmit = (item) => {
         navigation.navigate('Edit Address', { item })
