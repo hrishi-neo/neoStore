@@ -97,6 +97,7 @@
 		9265190D26BBDD8800CF68C7 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		9265190E26BBDD8800CF68C7 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		9282E06B26C2B70200DFF9CD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		92BEEAE926C6882900F38F04 /* NeoStoreReplica.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = NeoStoreReplica.entitlements; path = NeoStoreReplica/NeoStoreReplica.entitlements; sourceTree = "<group>"; };
 		A9F64CE51D1E9AF38BC5046A /* libPods-NeoStoreReplica.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NeoStoreReplica.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -160,6 +161,7 @@
 		13B07FAE1A68108700A75B9A /* NeoStoreReplica */ = {
 			isa = PBXGroup;
 			children = (
+				92BEEAE926C6882900F38F04 /* NeoStoreReplica.entitlements */,
 				925DFF0826C1025D00AC4B43 /* GoogleService-Info.plist */,
 				926518FE26BBDD8800CF68C7 /* Fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -464,11 +466,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NeoStoreReplica-NeoStoreReplicaTests/Pods-NeoStoreReplica-NeoStoreReplicaTests-frameworks.sh",
+				"${PODS_ROOT}/razorpay-pod/Pod/Razorpay.framework",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/AppInvokeSDK/AppInvokeSDK.framework/AppInvokeSDK",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Razorpay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppInvokeSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -631,11 +637,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NeoStoreReplica/Pods-NeoStoreReplica-frameworks.sh",
+				"${PODS_ROOT}/razorpay-pod/Pod/Razorpay.framework",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/AppInvokeSDK/AppInvokeSDK.framework/AppInvokeSDK",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Razorpay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppInvokeSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -886,6 +896,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NeoStoreReplica/NeoStoreReplica.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = NeoStoreReplica/Info.plist;
@@ -912,6 +923,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = NeoStoreReplica/NeoStoreReplica.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = NeoStoreReplica/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

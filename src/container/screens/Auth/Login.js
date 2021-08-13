@@ -96,7 +96,7 @@ const Login = ({ navigation }) => {
     }
     useEffect(() => {
         if (loggedIn == true) {
-            navigation.goBack()
+            navigation.navigate('Home')
         }
     }, [loggedIn])
 
