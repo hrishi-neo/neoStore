@@ -206,6 +206,7 @@ implementation project(':react-native-razorpay')
    implementation 'com.facebook.fresco:animated-webp:2.1.0'
   implementation 'com.facebook.fresco:webpsupport:2.0.0'
 implementation project(':react-native-push-notification')
+implementation project(':react-native-fs')
   // For WebP support, without animations
   implementation 'com.facebook.fresco:webpsupport:2.0.0'
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {

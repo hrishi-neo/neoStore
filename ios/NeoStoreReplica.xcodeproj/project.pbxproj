@@ -35,6 +35,7 @@
 		9265191C26BBDD8800CF68C7 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9265190C26BBDD8800CF68C7 /* EvilIcons.ttf */; };
 		9265191D26BBDD8800CF68C7 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9265190D26BBDD8800CF68C7 /* SimpleLineIcons.ttf */; };
 		9265191E26BBDD8800CF68C7 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9265190E26BBDD8800CF68C7 /* MaterialIcons.ttf */; };
+		92E288FE26CAB83E004065A1 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 92E288FD26CAB83E004065A1 /* appstore.png */; };
 		E4976B4C9BE19FF253EFDD14 /* libPods-NeoStoreReplica.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F64CE51D1E9AF38BC5046A /* libPods-NeoStoreReplica.a */; };
 /* End PBXBuildFile section */
 
@@ -96,8 +97,9 @@
 		9265190C26BBDD8800CF68C7 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		9265190D26BBDD8800CF68C7 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		9265190E26BBDD8800CF68C7 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		9282E06B26C2B70200DFF9CD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		92BEEAE926C6882900F38F04 /* NeoStoreReplica.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = NeoStoreReplica.entitlements; path = NeoStoreReplica/NeoStoreReplica.entitlements; sourceTree = "<group>"; };
+		92E288FC26CAB258004065A1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92E288FD26CAB83E004065A1 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
 		A9F64CE51D1E9AF38BC5046A /* libPods-NeoStoreReplica.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NeoStoreReplica.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -163,6 +165,7 @@
 			children = (
 				92BEEAE926C6882900F38F04 /* NeoStoreReplica.entitlements */,
 				925DFF0826C1025D00AC4B43 /* GoogleService-Info.plist */,
+				92E288FD26CAB83E004065A1 /* appstore.png */,
 				926518FE26BBDD8800CF68C7 /* Fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -170,7 +173,7 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				9282E06B26C2B70200DFF9CD /* Launch Screen.storyboard */,
+				92E288FC26CAB258004065A1 /* LaunchScreen.storyboard */,
 			);
 			name = NeoStoreReplica;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				9265191626BBDD8800CF68C7 /* Foundation.ttf in Resources */,
 				9265191D26BBDD8800CF68C7 /* SimpleLineIcons.ttf in Resources */,
 				9265191726BBDD8800CF68C7 /* Ionicons.ttf in Resources */,
+				92E288FE26CAB83E004065A1 /* appstore.png in Resources */,
 				9265191C26BBDD8800CF68C7 /* EvilIcons.ttf in Resources */,
 				9265191926BBDD8800CF68C7 /* FontAwesome5_Regular.ttf in Resources */,
 				9265191B26BBDD8800CF68C7 /* Zocial.ttf in Resources */,
