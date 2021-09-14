@@ -12,6 +12,7 @@ import Icons from 'react-native-vector-icons/MaterialIcons';
  */
 
 const StoreLocator = () => {
+    
     return (
         <View style={{ flex: 1 }}>
             <MapView

@@ -35,6 +35,7 @@ const Home = ({navigation}) => {
   const prod = useSelector((state) => state.prod);
   const loading = useSelector((state) => state.loading);
   const [search, setSearch] = useState('');
+  const [prodData, setprodData] = useState(data);
   const [filteredDataSource, setFilteredDataSource] = useState([]);
   const [masterDataSource, setMasterDataSource] = useState([]);
   const notify = notificationManager;
@@ -117,7 +118,7 @@ const Home = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
       <FlatList
-        data={data}
+        data={prodData}
         numColumns={1}
         ListHeaderComponent={
           <View style={styles.container2}>
